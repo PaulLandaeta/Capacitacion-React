@@ -1,11 +1,21 @@
-import React from 'react'
+import React from "react";
 
-export const Card = () => {
+export const Card = (props) => {
+  const { name, plate, registerDate } = props.pepito;
   return (
-    <div className="bg-slate-400 rounded p-5 m-5">
-        <div>Conductor: Paul Landaeta</div>
-        <div>PLACA: 5719HHp</div>
-        <div>Hora de Ingreso: 7:43 am</div>
+    <div className="bg-white rounded-lg p-5 mt-2 mr-10 ml-5 mb-5">
+      <p className="font-bold uppercase text-gray-600">
+        {" "}
+        Conductor: <span className="font-normal normal-case">{name}</span>
+      </p>
+      <p className="font-bold uppercase text-gray-600">
+        {" "}
+        Placa: <span className="font-normal">{plate}</span>
+      </p>
+      <p className="font-bold uppercase text-gray-600">
+        {" "}
+        Fecha: <span className="font-normal normal-case">{registerDate}</span>
+      </p>
     </div>
-  )
-}
+  );
+};

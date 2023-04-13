@@ -1,6 +1,6 @@
 import React from "react";
 import { Formulario } from "./Formulario";
-import { Auto } from "./Auto";
+import { Auto } from "./ListaDeAutos";
 export const Content = () => {
   return (
     <div className="mt-10 md:flex">

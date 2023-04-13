@@ -13,6 +13,21 @@ export const Formulario = () => {
         </label>
         <input 
           placeholder='EJ: 5719HHP'
+          className="border-2 w-full mt-2 p-1 rounded-md mb-2"
+        />
+        <label>
+          Nombre del Conductor
+        </label>
+        <input 
+          placeholder='EJ: Paul Landaeta'
+          className="border-2 w-full mt-2 p-1 rounded-md mb-2"
+        />
+        <label>
+          Fecha Ingreso
+        </label>
+        <input
+          type="date"
+          placeholder='EJ: 13-04-2023'
           className="border-2 w-full mt-2 p-1 rounded-md"
         />
       </form>
