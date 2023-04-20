@@ -1,6 +1,9 @@
 import React from "react";
 import { Card } from "./Card";
-export const Auto = () => {
+export const Auto = (props) => {
+ 
+  const { listaAutos } = props;
+  console.log('props', listaAutos);
   const drivers = [
     {
       name: "Paul Landaeta",
@@ -17,7 +20,7 @@ export const Auto = () => {
     <div className="md:w-1/2 overflow-y-scroll">
       <h3 className="font-bold text-3xl text-center"> Lista de Autos </h3>
       <p className="text-lg text-center mt-4">Autos Registrado</p>
-      {drivers.map((driver) => (
+      {listaAutos.map((driver) => (
         <Card pepito={driver} key={driver.plate} />
       ))}
     </div>
