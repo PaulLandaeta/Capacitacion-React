@@ -5,9 +5,18 @@ export const Formulario = (props) => {
   const [placa, setPlaca ] = useState('');
   const [name, setName] = useState('');
   const [registerDate, setRegisterDate ] = useState('');
+  const [error, setError] = useState(false);
 
   const handleSubmit = (event) => {
-    event.preventDefault();    
+    event.preventDefault();  
+    
+    // verificar que haya llenado todo el formulario
+    if([name, placa, registerDate].includes('')) {
+      setError(true);
+      return;
+    }
+    setError(false);
+
     console.log(placa);
     setListaAutos([...listaAutos, {
       name,
@@ -24,6 +33,7 @@ export const Formulario = (props) => {
         className="bg-white p-10 rounded-lg shadow-lg ml-10 mr-5 mt-2"
         onSubmit={handleSubmit}
       >
+        {error && <p className="bg-red-500 text-white text-center p-3 mb-5">Todos los campos son Obligatorios</p>}
         <label>Número de Placa</label>
         <input
           placeholder="EJ: 5719HHP"
